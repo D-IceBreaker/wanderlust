@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* HEADER SECTION */
+
+.icon {
+    height: 2em;
+    width: 2.2em;
+}
+
+.logo {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: rgba(41, 187, 137, 1);
+}
+
+li, a, button{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    background-color: rgb(235, 235, 235);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    /* position: fixed;
+
+    top: 0;
+    left: 0; */
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+    background-color: rgb(235, 235, 235);
+    z-index: 100;
+}
+
+.logobox {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.1s ease 0s;
+}
+
+.nav-links li a:hover {
+    border: 1px solid #333;
+    padding: 7px 10px;
+    color: rgba(41, 187, 137, 1);
+    border-radius: 10px;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    display: block;
+    padding: 15px 10%;
+    /* position: fixed;
+
+    bottom: 0;
+    left: 0; */
+    width: 100%;
+    box-shadow: 0 4px 2px 6px rgba(0,0,0,.2);
+    color: #737373; 
+    background-color: rgb(235, 235, 235);
+    z-index: 100;
+
+}
+
+.upperfooter {  
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}  
+
+.lowerfooter {
+    display: flex;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.footer-column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column h1 {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li, .footer-column ul li a  {
+    font-size: 14px;
+    color: inherit; 
+    transition: all 0.1s ease 0s;
+}
+
+.footer-column ul li a:hover {
+    color: rgba(41, 187, 137, 1);
+}
+
+/* HOME SECTION */
+
+.home-main {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/images/20_I01.png');
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 30%;
+    width: 50%;
+    text-shadow: black 0px 0px 10px;
+    color: white;
+    transition: all 0.1s ease 0s;
+}
+
+.home-container h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+}
+
+.home-container h5 {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.home-container p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.home-go-button {
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    margin-top: 1em;
+    border: 1px solid white;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.home-go-button:hover {
+    color:rgba(41, 187, 137, 1)
+}
+
+/* EXPLORE SECTION */
+
+.explore-main {
+    background-color: white;
+}
+
+.explore-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+
+    width: 90%;
+    height: 90%;
+    padding: 15px 5%;
+}
+
+.explore-example {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+
+    border: 0.4em solid white;
+    box-shadow: 4px 4px 8px 5px rgba(0, 0, 0, .1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 1s ease 0s;
+}
+
+.explore-example:hover {
+    transform: scale(1.3);
+}
+
+.explore-example h4, .explore-example p {
+    font-family: 'Roboto', Arial, sans-serif;
+    text-shadow: black 0px 0px 10px;
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    background-color: transparent;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+.explore-example h4 {
+    margin-top: auto;
+}
+
+.explore-example p {
+    font-size: 10px;
+    padding-bottom: 2%;
+}
+
+#example1 {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/bg_sunnytown_1.png');
+}
+
+#example2 {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/bg_building_1.png');
+}
+
+#example3 {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/26_g10_laterano_roof.png');
+}
+
+#example4 {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/25_g06_mountainroad_d.png');
+}
+
+#example5 {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/28_g7_concerthall_outside.png');
+}
+
+#example6 {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/bg_lungmen_m.png');
+}
+
+/* ABOUT SECTION */
+
+.about-main {
+    background-image: url('https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/backgrounds/bg_beach_1.png');
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    height: 70%;
+    padding: 15px 5%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.about-container p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-shadow: black 0px 0px 10px;
+    color: white;
+
+    background-color: transparent;
+}
